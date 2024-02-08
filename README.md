@@ -1,16 +1,16 @@
 Inbound Flow:
 
-Checks contact attributes block to determine if the contact is contacting by phone or chat, or if it is a task, and to route accordingly.
+Checks contact attributes block to determine if the contact is contacting by phone or chat, and to route accordingly.
 
 If Contact Channel is either chat or task, the contact is transferred to the Queue configurations.
 
-If Contact Channel is voice, then based on user input the contact is either transferred to the other flows or a follow-up agent task is created for this contact.
+If Contact Channel is voice, then based on user input the contact is transferred to the other flows.
 
 Queue Configurations:
 
-1. The customer is put in the BasicQueue.
+1. The customer is put in the ClaimHelp queue.
 
-2. Then Default customer queue flow is invoked. This block runs a Loop prompts block that plays the following:
+2. Then queue flow is invoked. This block runs a Loop prompts block that plays the following:
 
     "Thank you for calling. Your call will be answered in the order it was received."
 
